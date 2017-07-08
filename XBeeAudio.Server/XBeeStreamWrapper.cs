@@ -37,15 +37,7 @@ namespace XBeeAudio
 
             return AsyncInfo.Run<uint, uint>(async (token, progress) =>
             {
-                var block = buffer.ToArray();
-                var memoryStream = new MemoryStream(block);
-
-                byte[] b = new byte[100];
-                while (memoryStream.Read(b, 0, b.Length) > 0)
-                {
-                    await _outputStream.WriteAsync(b.AsBuffer());
-                }
-                
+                await _outputStream.WriteAsync(buffer);
                 progress.Report(buffer.Length);
                 return buffer.Length;
             });

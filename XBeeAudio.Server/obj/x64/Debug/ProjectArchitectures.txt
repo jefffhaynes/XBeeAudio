@@ -1,0 +1,1 @@
+C:\Users\feedy\Source\Repos\XBeeAudio\XBeeAudio.Server\XBeeAudio.Server.csproj;x64

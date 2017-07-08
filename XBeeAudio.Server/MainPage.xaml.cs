@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Media.Capture;
@@ -26,7 +25,8 @@ namespace XBeeAudio
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             await FindXBeeAsync();
-            await InitializeAudioAsync();
+            await InitializeRecordingAsync();
+            InitializePlayback();
         }
 
         private async Task FindXBeeAsync()
@@ -52,7 +52,7 @@ namespace XBeeAudio
             await _controller.DiscoverNetworkAsync(TimeSpan.FromSeconds(5));
         }
 
-        private async Task InitializeAudioAsync()
+        private async Task InitializeRecordingAsync()
         {
             try
             {
@@ -69,7 +69,7 @@ namespace XBeeAudio
 
                 await _capture.InitializeAsync(settings);
 
-                StatusText.Text += "Audio initialized\n";
+                StatusText.Text += "Recording initialized\n";
             }
             catch (Exception e)
             {
@@ -77,10 +77,24 @@ namespace XBeeAudio
             }
         }
 
+        private void InitializePlayback()
+        {
+            if (_controller == null)
+            {
+                return;
+            }
+
+            var playback = new MediaElement();
+            playback.SetSource(new XBeeStreamWrapper(_controller.Local.GetSerialStream()), "mp3");
+            playback.Play();
+
+            StatusText.Text += "Playback initialized\n";
+        }
+
         private async void PushToTalkButton_OnPressed(object sender, RoutedEventArgs e)
         {
             await _capture.StartRecordToStreamAsync(MediaEncodingProfile.CreateMp3(AudioEncodingQuality.Low), 
-                new XBeeStreamWrapper(_remoteNode.GetSerialStream()));
+                new XBeeStreamWrapper(_controller.Local.GetSerialStream()));
         }
     }
 }
