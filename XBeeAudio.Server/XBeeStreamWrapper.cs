@@ -26,9 +26,41 @@ namespace XBeeAudio
             _stream?.Dispose();
         }
 
+        readonly Random _rand = new Random();
+
         public IAsyncOperationWithProgress<IBuffer, uint> ReadAsync(IBuffer buffer, uint count, InputStreamOptions options)
         {
-            return _inputStream.ReadAsync(buffer, count, options);
+            //try
+            //{
+            //    return _inputStream.ReadAsync(buffer, count, options);
+            //}
+            //catch (OperationCanceledException)
+            //{
+            //    return AsyncInfo.Run<IBuffer, uint>((token, progress) => new byte[count].AsBuffer())
+            //}
+
+            return AsyncInfo.Run<IBuffer, uint>(async (token, progress) =>
+            {
+                Debug.WriteLine($"Read {count} bytes");
+
+                try
+                {
+                    var result = await _inputStream.ReadAsync(buffer, count, options);
+                    progress.Report(buffer.Length);
+                    return result;
+                }
+                catch (OperationCanceledException)
+                {
+                    progress.Report(count);
+                    var noise = new byte[count];
+                    _rand.NextBytes(noise);
+                    return noise.AsBuffer();
+                }
+                catch (Exception e)
+                {
+                    throw;
+                }
+            });
         }
 
         public IAsyncOperationWithProgress<uint, uint> WriteAsync(IBuffer buffer)

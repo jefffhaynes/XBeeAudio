@@ -28,6 +28,10 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
+      <RootProperty Name="Name" />
+      <RootProperty Name="AudioCategory" />
+    </RootType>
     <RootType FullName="XBeeAudio.MainPage" />
   </Roots.RootTypes>
 </Roots>

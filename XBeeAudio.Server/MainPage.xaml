@@ -13,5 +13,6 @@
         </Grid.RowDefinitions>
         <Button Name="PushToTalkButton" Margin="6" Content="Push to talk" Click="PushToTalkButton_OnPressed"/>
         <TextBlock Grid.Row="1" Margin="6" Name="StatusText"/>
+        <MediaElement AudioCategory="Communications" Name="MediaElement"/>
     </Grid>
 </Page>
