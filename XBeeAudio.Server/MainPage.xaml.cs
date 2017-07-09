@@ -41,7 +41,7 @@ namespace XBeeAudio
 
             StatusText.Text = "Found controller \n";
 
-            _controller = controllers.First();
+            _controller = controllers.Skip(1).First();
 
             _controller.NodeDiscovered += (sender, args) =>
             {
@@ -79,13 +79,13 @@ namespace XBeeAudio
 
         private void InitializePlayback()
         {
-            if (_controller == null)
+            if (_remoteNode == null)
             {
                 return;
             }
 
             var playback = new MediaElement();
-            playback.SetSource(new XBeeStreamWrapper(_controller.Local.GetSerialStream()), "mp3");
+            playback.SetSource(new XBeeStreamWrapper(_remoteNode.GetSerialStream()), "mp3");
             playback.Play();
 
             StatusText.Text += "Playback initialized\n";
@@ -93,8 +93,13 @@ namespace XBeeAudio
 
         private async void PushToTalkButton_OnPressed(object sender, RoutedEventArgs e)
         {
+            if (_remoteNode == null)
+            {
+                return;
+            }
+
             await _capture.StartRecordToStreamAsync(MediaEncodingProfile.CreateMp3(AudioEncodingQuality.Low), 
-                new XBeeStreamWrapper(_controller.Local.GetSerialStream()));
+                new XBeeStreamWrapper(_remoteNode.GetSerialStream()));
         }
     }
 }

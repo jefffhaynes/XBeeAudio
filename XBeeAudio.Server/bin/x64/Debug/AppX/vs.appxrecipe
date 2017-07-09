@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\feedy\Source\Repos\XBeeAudio\XBeeAudio.Server\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-08T19:05:33.479</Modified>
+      <Modified>2017-07-09T16:10:04.337</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\feedy\Source\Repos\XBeeAudio\XBeeAudio.Server\bin\x64\Debug\XBeeAudio.exe">
       <PackagePath>entrypoint\XBeeAudio.exe</PackagePath>
-      <Modified>2017-07-08T19:05:31.221</Modified>
+      <Modified>2017-07-09T16:10:03.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\feedy\.nuget\packages\BinarySerializer\7.5.5\lib\netstandard1.3\BinarySerializer.dll">
       <PackagePath>BinarySerializer.dll</PackagePath>
@@ -507,9 +507,9 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T06:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\feedy\.nuget\packages\XBee\5.3.0\runtimes\win10-x64\lib\uap10.0\XBee.Universal.dll">
+    <AppxPackagedFile Include="C:\Users\feedy\.nuget\packages\XBee\5.3.1\runtimes\win10-x64\lib\uap10.0\XBee.Universal.dll">
       <PackagePath>XBee.Universal.dll</PackagePath>
-      <Modified>2017-07-08T19:02:08.000</Modified>
+      <Modified>2017-07-09T15:47:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\feedy\.nuget\packages\XBee.Core\1.4.1\lib\netstandard1.3\XBee.Core.dll">
       <PackagePath>XBee.Core.dll</PackagePath>
@@ -564,11 +564,11 @@
     <AppxPackagedFile Include="C:\Users\feedy\Source\Repos\XBeeAudio\XBeeAudio.Server\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-08T19:05:32.630</Modified>
+      <Modified>2017-07-09T15:52:10.377</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\feedy\Source\Repos\XBeeAudio\XBeeAudio.Server\bin\x64\Debug\Core\XBeeAudio.exe">
       <PackagePath>XBeeAudio.exe</PackagePath>
-      <Modified>2017-07-08T19:05:33.465</Modified>
+      <Modified>2017-07-09T16:10:04.332</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

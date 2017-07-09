@@ -2420,7 +2420,7 @@
           }
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -4906,7 +4906,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -7420,7 +7420,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -9904,7 +9904,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -12427,7 +12427,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -14911,7 +14911,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -17434,7 +17434,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "XBee/5.3.0": {
+      "XBee/5.3.1": {
         "type": "package",
         "dependencies": {
           "XBee.Core": "1.4.1"
@@ -26047,10 +26047,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "XBee/5.3.0": {
-      "sha512": "8b0Sw50yeqQ/rkPI7/9MoyfJN4clSOuJxAq/XUQwDPymJxOzXA9gyF8CAfdTcZsfaMnfbzF49jewfheNVO4Lzw==",
+    "XBee/5.3.1": {
+      "sha512": "7lylXqjRNRQoY08EbMfcgeVz7UQGeTGz1/jdHz7Ism/2UGlZDfc8oAmPHpMMSsAnsZckyDTo8qZfPjaDgFCWqQ==",
       "type": "package",
-      "path": "xbee/5.3.0",
+      "path": "xbee/5.3.1",
       "files": [
         "lib/net46/XBee.Classic.dll",
         "ref/uap10.0/XBee.Universal.XML",
@@ -26062,7 +26062,7 @@
         "runtimes/win10-x64/lib/uap10.0/XBee.Universal.pdb",
         "runtimes/win10-x86/lib/uap10.0/XBee.Universal.dll",
         "runtimes/win10-x86/lib/uap10.0/XBee.Universal.pdb",
-        "xbee.5.3.0.nupkg.sha512",
+        "xbee.5.3.1.nupkg.sha512",
         "xbee.nuspec"
       ]
     },
@@ -26080,7 +26080,7 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.10586": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.3.3",
-      "XBee >= 5.3.0"
+      "XBee >= 5.3.1"
     ]
   },
   "packageFolders": {
@@ -26110,7 +26110,7 @@
       },
       "XBee": {
         "target": "Package",
-        "version": "[5.3.0, )"
+        "version": "[5.3.1, )"
       }
     },
     "frameworks": {
@@ -26122,7 +26122,7 @@
           },
           "XBee": {
             "target": "Package",
-            "version": "[5.3.0, )"
+            "version": "[5.3.1, )"
           }
         }
       }
